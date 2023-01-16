@@ -38,10 +38,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <div></div>
       <main className={styles.main}>
-        <label>First name:</label>
+        <label>Login Page</label>
         <input
           type="text"
+          placeholder='Username'
           id="first"
           name="first"
           pattern="[A-Z] [a-z] {2, 10}"
@@ -49,9 +51,10 @@ export default function Home() {
           onChange={e => setFormData({...formData, firstName: e.target.value})}
         />
 
-        <label>Username:</label>
+        
         <input
           type="text"
+          placeholder='Password'
           id="first"
           name="first"
           required
@@ -60,7 +63,7 @@ export default function Home() {
           onChange={e => setFormData({...formData, username: e.target.value})}
         />
 
-        <button type="submit" onClick={() => CheckLogin()}> Submit</button>
+        <button class="submit" type="submit" onClick={() => CheckLogin()}>Login</button>
 
       </main>
     </>
